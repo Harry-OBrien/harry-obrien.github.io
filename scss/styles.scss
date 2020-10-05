@@ -102,6 +102,13 @@ body {
   padding: 70px 0;
 }
 
+.center-img {
+  vertical-align: middle;
+  height: 100%;
+  max-width: 300px;
+  object-fit: cover;
+}
+
 // No JS styles
 .no-js {
   #experience-timeline {
@@ -461,11 +468,20 @@ footer {
 
   h2 {
     color: $heading;
+    text-align: center;
+    display: block;
   }
 
   p {
     color: $text;
     margin: 0;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 260px;
   }
 }
 
@@ -548,7 +564,6 @@ footer {
 .vtimeline-point {
   position: relative;
   display: block;
-  vertical-align: top;
   margin-bottom: 30px;
 }
 
@@ -646,63 +661,33 @@ footer {
   border-bottom: 1px solid $border;
   text-align: center;
 
-  h2 {
-    color: $heading;
-    margin-bottom: 50px;
-  }
-
   .carousel-item {
     height: 500px;
   }
-}
 
-.project {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto 30px auto;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 4px;
+  .carousel-caption {
+    background-color: #4b505488;
+
+    h4 {
+      font-size: 1.5em;
+      font-weight: 300;
+      margin: 0 0 15px 0;
+      color: $base-color;
+    }
+
+    p {
+      color: $text;
+      margin: 0 0 15px 0;
+      font-size: 0.9em;
+      color: lightgray;
+    }
+  }
 }
 
 .project-image {
   float: left;
   object-fit: cover;
   height: 500px;
-}
-
-.project-info {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: 300px;
-  padding: 15px;
-
-  h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: $heading;
-    margin: 0 0 15px 0;
-  }
-
-  p {
-    color: $text;
-    margin: 0 0 15px 0;
-    font-size: 0.9em;
-  }
-}
-
-.no-image {
-  .project-info {
-    position: relative;
-    margin: 0;
-    padding: 30px 15px;
-    transform: none;
-  }
-}
-
-#more-projects {
-  display: none;
 }
 
 /*
@@ -733,12 +718,26 @@ footer {
 
 .hackathon-image {
   float: left;
+  width: 300px;
+  height: 300px;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0.5em 0.5em;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
 .hackathon-info {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   margin-left: 300px;
   padding: 15px;
 
